@@ -1,0 +1,17 @@
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE BrisiTrening
+@korisnikId int
+AS
+BEGIN
+
+	SET NOCOUNT ON;
+	DELETE FROM Treninzi
+	WHERE KorisnikId=@korisnikId;
+
+END
+GO

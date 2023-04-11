@@ -1,0 +1,16 @@
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE BrisiAktivnosti
+@korisnikId int=null
+AS
+BEGIN
+	SET NOCOUNT ON;
+	DELETE FROM DnevnaAktivnost
+	WHERE KorisnikId$=@korisnikId;
+
+END
+GO

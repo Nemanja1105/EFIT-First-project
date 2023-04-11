@@ -1,0 +1,18 @@
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE BrisiLogin
+@korisnikId int
+AS
+BEGIN
+
+	SET NOCOUNT ON;
+	DELETE FROM Login
+	WHERE Korisnik_ID$=@korisnikId;
+
+   
+END
+GO

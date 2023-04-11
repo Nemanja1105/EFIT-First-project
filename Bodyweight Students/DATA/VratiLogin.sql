@@ -1,0 +1,17 @@
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE VratiLogin
+@korisnikId int
+AS
+BEGIN
+
+	SET NOCOUNT ON;
+	SELECT Email,Password,IsVerified FROM Login
+	WHERE Korisnik_ID$=@korisnikId;
+
+END
+GO
